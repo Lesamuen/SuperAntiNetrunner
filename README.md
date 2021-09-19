@@ -21,7 +21,7 @@ Version 0.2.0 (2021-03-10)
 - Implemented default floor content lists from core rulebook
 - Started on floor connection generation
 
-Version 0.3.0 (xxxx-xx-xx)
+Version 0.3.0 (2021-09-18)
 - Split single source file into multiple headers and sources
 - Removed architecture data structure temporarily; it was too messy.
 - Moved everything to GitHub!!!

@@ -1,7 +1,7 @@
 # SuperAntiNetrunner
 A Net Architecture Generator for Cyberbunk RED (2019)
 
-Created by Samuel Nguyen and Robert Kubos
+Created by Samuel Nguyen and Robert Kubos (2021)
 
 # Change Log
 Version 0.0.1 (2021-03-05)
@@ -22,3 +22,6 @@ Version 0.2.0 (2021-03-10)
 - Started on floor connection generation
 
 Version 0.3.0 (xxxx-xx-xx)
+- Split single source file into multiple headers and sources
+- Removed architecture data structure temporarily; it was too messy.
+- Moved everything to GitHub!!!

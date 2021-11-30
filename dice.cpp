@@ -2,10 +2,8 @@
 #include "random"
 #include "iostream"
 
-int r (int num, int size)
+int r (int num, int size, std::mt19937 rng)
 {
-    std::random_device rd;
-    std::mt19937 rng = std::mt19937(rd());
 	std::uniform_int_distribution<int> uid(1, size);
     int sum = 0;
     for (int i = 0; i < num; i++)

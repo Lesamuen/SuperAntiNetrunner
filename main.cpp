@@ -1,19 +1,17 @@
 /*
-SuperAntiNetRunner Version #0.3.0
+SuperAntiNetRunner Version #0.4.0
 To Do List:
-RETHINK DATA STRUCTURE FOR ARCHITECTURE
-Method for displaying architecture
+Method for displaying architecture (Use BFS)
 Edit Menu
 Add price calculator
-Create classes/structures for control nodes, black ice
 Create .txt or .json lists for default control nodes and black ice, pull from PHB
-Add method to load above content
-Add pathfinder numbers
+Add method to load above content (large arrays of pointers in main)
 Actual graphics? Consider openGL, unity, unreal engine
 */
 
 #include <iostream>
 #include <string>
+#include <random>
 #include "dice.h"
 
 using namespace std;
@@ -21,20 +19,24 @@ using namespace std;
 int main ()
 {
     // INIT
-    string versionNumber = "0.3.0";
+    string versionNumber = "0.4.0";
+    std::random_device rd;
+    std::mt19937 rng = std::mt19937(rd());
     string difficultyChoice, generationChoice, editChoice;
 
     // Begin "ui"; may replace later with graphics ui
-    cout << "Welcome to SuperAntiNetrunner version " << versionNumber << "." << endl;
+    cout << "Welcome to SuperAntiNetrunner version " << versionNumber << ".\n";
 
     // Choose difficulty
     difficultyMenu:
-    cout << endl << "Please select your NET Architecture's difficulty rating." << endl;
-    cout << "1. Basic" << endl;
-    cout << "2. Standard" << endl;
-    cout << "3. Uncommon" << endl;
-    cout << "4. Advanced" << endl;
-    cout << "5. Never mind, get me out of here!" << endl << endl;
+    cout
+    << "\nPlease select your NET Architecture's difficulty rating.\n"
+    << "1. Basic\n"
+    << "2. Standard\n"
+    << "3. Uncommon\n"
+    << "4. Advanced\n"
+    << "5. Never mind, get me out of here!\n"
+    << flush;
     while (true)
     {
         cout << "Difficulty Choice: ";
@@ -42,7 +44,7 @@ int main ()
         if (difficultyChoice == "5") 
         {
             cout << "'Ight, see you at the Afterlife!" << endl;
-            exit(EXIT_SUCCESS);
+            return 0;
         }
         else if (difficultyChoice == "1" || difficultyChoice == "2" || difficultyChoice == "3" || difficultyChoice == "4")
         {
@@ -53,11 +55,13 @@ int main ()
 
     // Choose generation
     generationMenu:
-    cout << endl << "Would you like to build your architecture from the ground up, or edit a randomly generated one?" << endl;
-    cout << "1. Ground Up" << endl;
-    cout << "2. Randomly Generated" << endl;
-    cout << "3. Return to previous menu." << endl;
-    cout << "4. Never mind, get me out of here!" << endl;
+    cout
+    << "\nWould you like to build your architecture from the ground up, or edit a randomly generated one?\n"
+    << "1. Ground Up\n"
+    << "2. Randomly Generated\n"
+    << "3. Return to previous menu.\n"
+    << "4. Never mind, get me out of here!\n"
+    << flush;
     while (true)
     {
         cout << "Generation Choice: ";
@@ -65,7 +69,7 @@ int main ()
         if (generationChoice == "4")
         {
             cout << "'Ight, see you at the Afterlife!" << endl;
-            exit(EXIT_SUCCESS);
+            return 0;
         }
         else if (generationChoice == "3")
         {
@@ -94,11 +98,13 @@ int main ()
 
     // Choose to Edit
     editChoiceMenu:
-    cout << endl << "Would you like to make any edits?" << endl;
-    cout << "1. Yes." << endl;
-    cout << "2. No." << endl;
-    cout << "3. Return to previous menu." << endl;
-    cout << "4. Never mind, get me out of here!" << endl;
+    cout
+    << "\nWould you like to make any edits?\n"
+    << "1. Yes.\n"
+    << "2. No.\n"
+    << "3. Return to previous menu.\n"
+    << "4. Never mind, get me out of here!\n"
+    << flush;
     while (true)
     {
         cout << "Edit Choice: ";
@@ -106,7 +112,7 @@ int main ()
         if (editChoice == "4")
         {
             cout << "'Ight, see you at the Afterlife!" << endl;
-            exit(EXIT_SUCCESS);
+            return 0;
         }
         else if (editChoice == "3")
         {

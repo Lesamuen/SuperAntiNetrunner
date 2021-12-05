@@ -1,5 +1,5 @@
 /*
-SuperAntiNetRunner Version #0.4.0
+SuperAntiNetRunner Version #0.4.5
 To Do List:
 Method for displaying architecture (Use BFS)
 Edit Menu
@@ -13,13 +13,14 @@ Actual graphics? Consider openGL, unity, unreal engine
 #include <string>
 #include <random>
 #include "dice.h"
+#include "architecture.h"
 
 using namespace std;
 
 int main ()
 {
     // INIT
-    string versionNumber = "0.4.0";
+    string versionNumber = "0.4.5";
     std::random_device rd;
     std::mt19937 rng = std::mt19937(rd());
     string difficultyChoice, generationChoice, editChoice;

@@ -4,6 +4,10 @@ A Net Architecture Generator for Cyberbunk RED (2019)
 Created by Samuel Nguyen and Robert Kubos (2021)
 
 # Change Log
+Version 0.4.5 (2021-12-05)
+- Set up all basic definitions for floor contents
+- Editted some declarations
+
 Version 0.4.0 (2021-11-30)
 - Set up all basic declarations for net architecture and contents; next version will see whether these declarations actually work.
 - Moved PRNG definition from function call to main program thread, to lower costs.

@@ -4,6 +4,9 @@ A Net Architecture Generator for Cyberbunk RED (2019)
 Created by Samuel Nguyen and Robert Kubos (2021)
 
 # Change Log
+Version 0.4.6 (2022-05-23)
+- Added license
+
 Version 0.4.5 (2021-12-05)
 - Set up all basic definitions for floor contents
 - Editted some declarations
